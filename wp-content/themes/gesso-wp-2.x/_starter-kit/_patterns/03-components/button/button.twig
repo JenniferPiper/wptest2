@@ -1,0 +1,5 @@
+{% if is_button_tag %}
+  <button class="button {{ modifier_classes }}"{% if is_disabled %} disabled{% endif %}>{{ text|raw }}</button>
+{% else %}
+  <a href="{{ url|raw }}" class="button {{ modifier_classes }}">{{ text|raw }}</a>
+{% endif %}
